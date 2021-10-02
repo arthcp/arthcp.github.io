@@ -1,0 +1,24 @@
+.home-container {
+  padding-top: 40vh !important;
+}
+.name {
+  letter-spacing: .5rem;
+}
+.tagline {
+  letter-spacing: .5rem;
+}
+
+
+@media (max-width: 576px) {
+  .name {
+    font-size: 2.5rem;
+    letter-spacing: .4rem;
+  }
+  .tagline {
+    font-size: 1rem;
+    letter-spacing: .2rem;
+  }
+  .link-list {
+    margin-top: 1rem !important;
+  }
+}
