@@ -1,5 +1,5 @@
 ---
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/base.css";
 
 interface Props {
   title: string;
@@ -14,42 +14,45 @@ const navItems = [
 ---
 
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
     <script
       src="https://kit.fontawesome.com/93902711a7.js"
       crossorigin="anonymous"></script>
   </head>
-  <body class="bg-dark text-light">
-    <nav
-      class="navbar navbar-expand navbar-dark bg-dark"
-      style="border-bottom: 1px solid rgba(255,255,255,0.1)"
-    >
-      <div class="container" style="max-width: 800px;">
-        <a
-          class="navbar-brand text-uppercase"
-          href="/"
-          style="letter-spacing: 0.1em;">arth</a
-        >
-        <div class="navbar-nav ms-auto">
-          {
-            navItems.map(({ title, href }) => (
-              <a
-                class={`nav-link text-uppercase ${Astro.url.pathname === href ? "active" : ""}`}
-                href={href}
-                style="letter-spacing: 0.1em;"
-              >
-                {title}
-              </a>
-            ))
-          }
+  <body>
+    <nav>
+      <div class="container mx-auto max-w-3xl">
+        <div class="flex items-center justify-between p-8">
+          <a
+            href="/"
+            class="text-lg uppercase tracking-wider hover:text-accent-hover transition-colors"
+          >
+            arth
+          </a>
+          <div class="flex items-center space-x-6">
+            {
+              navItems.map(({ title, href }) => (
+                <a
+                  class={`uppercase tracking-wider hover:text-accent-hover transition-colors ${
+                    Astro.url.pathname === href
+                      ? "text-accent"
+                      : "text-text-muted"
+                  }`}
+                  href={href}
+                >
+                  {title}
+                </a>
+              ))
+            }
+          </div>
         </div>
+        <div class="h-px bg-accent mb-3 w-full"></div>
       </div>
     </nav>
     <slot />

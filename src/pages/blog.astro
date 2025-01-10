@@ -1,12 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout title="Blog - arth">
-  <div class="container py-5" style="max-width: 800px;">
-    <h2 class="text-uppercase text-center mb-5" style="letter-spacing: 0.1em;">
-      Blog
-    </h2>
-    <p class="text-center">Coming soon...</p>
+  <div class="container mx-auto max-w-3xl px-4 py-12">
+    <h2 class="text-2xl uppercase tracking-wider text-center mb-12">Blog</h2>
+    <div class="space-y-8">
+      {
+        posts.map((post) => (
+          <article class="-mx-6 rounded-lg hover:bg-accent-hover transition-colors group">
+            <a href={`/blog/${post.slug}`} class="block p-6">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xl group-hover:text-text">{post.data.title}</h3>
+                <p class="text-text-muted text-sm group-hover:text-text">
+                  {post.data.pubDate.toLocaleDateString()}
+                </p>
+              </div>
+              <p class="text-text-muted group-hover:text-text">
+                {post.data.description}
+              </p>
+            </a>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </Layout>

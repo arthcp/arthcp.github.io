@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    @apply scroll-smooth font-mono;
+  }
+  body {
+    @apply bg-primary text-text;
+  }
+  ::selection {
+    @apply bg-[#740727] text-text;
+  }
+} 
