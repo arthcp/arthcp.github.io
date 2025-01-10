@@ -11,7 +11,7 @@ export default {
         transparent: "transparent",
         current: "currentColor",
         primary: {
-          DEFAULT: "#002A32",
+          DEFAULT: "#0E131B",
         },
         accent: {
           DEFAULT: "#8B0830",
