@@ -1,0 +1,57 @@
+---
+import "bootstrap/dist/css/bootstrap.min.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const navItems = [
+  { title: "Blog", href: "/blog" },
+  { title: "Cache", href: "/cache" },
+];
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <script
+      src="https://kit.fontawesome.com/93902711a7.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-dark text-light">
+    <nav
+      class="navbar navbar-expand navbar-dark bg-dark"
+      style="border-bottom: 1px solid rgba(255,255,255,0.1)"
+    >
+      <div class="container" style="max-width: 800px;">
+        <a
+          class="navbar-brand text-uppercase"
+          href="/"
+          style="letter-spacing: 0.1em;">arth</a
+        >
+        <div class="navbar-nav ms-auto">
+          {
+            navItems.map(({ title, href }) => (
+              <a
+                class={`nav-link text-uppercase ${Astro.url.pathname === href ? "active" : ""}`}
+                href={href}
+                style="letter-spacing: 0.1em;"
+              >
+                {title}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </nav>
+    <slot />
+  </body>
+</html>
