@@ -1,6 +1,6 @@
 ---
 title: "The Evolution of Interop"
-pubDate: 2024-01-9
+pubDate: 2024-01-09T00:00:00.000Z
 description: "What if I told you the solutions to blockchain interoperability were discovered in the 1980s?"
 ---
 
