@@ -1,0 +1,63 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.tagline {
+  letter-spacing: 0.1em;
+}
+
+.link-list {
+  width: 100%;
+}
+
+.cached-exhibit-link {
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.cached-exhibit-link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* Cached Exhibit Styles */
+.ss-container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.ss-elem {
+  margin-top: 40px;
+}
+
+.ss-title {
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+
+.ss-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.ss-narrow {
+  max-width: 300px;
+}
+
+.ss-mid {
+  max-width: 500px;
+}
+
+.ss-wide {
+  max-width: 800px;
+} 

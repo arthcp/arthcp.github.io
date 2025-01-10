@@ -1,0 +1,41 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const exhibits = [
+  { title: 'mark-beta', image: '/ss/mark-beta.jpg', size: 'wide' },
+  { title: 'king-of-kings', image: '/ss/king-of-kings.png', size: 'mid' },
+  { title: 'wedding-gift-economy', image: '/ss/wedding-gift-economy.jpg', size: 'mid' },
+  { title: 'tech-over-politics', image: '/ss/tech-over-politics.png', size: 'mid' },
+  { title: 'terminal-ai-helper', image: '/ss/terminal-ai-helper.png', size: 'wide' },
+  { title: 'height-in-dating-market', image: '/ss/height-in-dating-market.jpg', size: 'mid' },
+  { title: 'avada-kedavra', image: '/ss/avada-kedavra.jpg', size: 'narrow' },
+  { title: 'rick-morty-gada', image: '/ss/rick-morty-gada.jpg', size: 'narrow' },
+  { title: 'random-world-window', image: '/ss/random-world-window.png', size: 'mid' },
+  { title: 'spinoff-done-right', image: '/ss/spinoff-done-right.jpg', size: 'wide' },
+  { title: 'simple-to-complex-systems', image: '/ss/simple-to-complex-systems.png', size: 'wide' },
+  { title: 'gashole', image: '/ss/gashole.png', size: 'wide' },
+  { title: 'fund-movr-sbs-with-ps', image: '/ss/fund-movr-sbs-with-ps.png', size: 'wide' },
+];
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>arthcp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://kit.fontawesome.com/93902711a7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <div class="tagline h3 font-weight-normal text-uppercase text-center mt-5 mb-0 w-100">Cached Exhibit</div>
+    <div class="ss-container text-center ml-auto mr-auto mb-5">
+      {exhibits.map(({ title, image, size }) => (
+        <div class="ss-elem">
+          <div class="ss-title">{title}</div>
+          <img class={`ss-img ss-${size}`} src={image} alt={title} />
+        </div>
+      ))}
+    </div>
+  </body>
+</html> 
