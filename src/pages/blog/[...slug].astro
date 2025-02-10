@@ -21,6 +21,15 @@ const { Content } = await post.render();
         {post.data.pubDate.toLocaleDateString()}
       </p>
       <h1 class="text-4xl my-8">{post.data.title}</h1>
+      {
+        post.data.cover && (
+          <img
+            src={`/images/${post.data.cover}`}
+            alt={post.data.title}
+            class="mb-8"
+          />
+        )
+      }
       <p class="mb-12">
         <em>
           <strong>{post.data.description}</strong>

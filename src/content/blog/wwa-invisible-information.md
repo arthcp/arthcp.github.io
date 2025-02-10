@@ -1,10 +1,10 @@
 ---
 title: "Working with AI: The Invisible Information"
 pubDate: 2024-02-01T00:00:00.000Z
-description: "How working effectively with AI requires us to notice and articulate the invisible information we take for granted in human work."
+description: "Recognize and articulate the hidden information we take for granted in human work."
+cover: "michael-scott-the-office.jpg"
+thumb: "michael-scott-the-office.jpg"
 ---
-
-![Michael Scott The Office](/images/michael-scott-the-office.jpg)
 
 Picture yourself explaining a task to a new colleague. Now imagine doing the same with an AI assistant. Notice how differently you need to communicate? When working with humans, we rely on shared context, unstated assumptions, and cultural understanding. With AI, we're discovering that this invisible information needs to be made explicit.
 

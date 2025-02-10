@@ -2,6 +2,7 @@
 title: "The Evolution of Interop"
 pubDate: 2024-01-09T00:00:00.000Z
 description: "What if I told you the solutions to blockchain interoperability were discovered in the 1980s?"
+thumb: "orchestration.jpg"
 ---
 
 Back then, researchers at Princeton were solving a seemingly unrelated problem: how to manage long-running database transactions without locking up the entire system.
